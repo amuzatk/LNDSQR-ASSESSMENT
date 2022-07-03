@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-import "./NavBar.css";
-import Logo from "../asset/Group.svg";
-import icon from "../asset/np_notification_2425223_000000 1.svg";
-import imag from "../asset/image 4.svg";
-import drop from "../asset/np_dropdown.svg";
+import "./NavBar.scss";
+import Logo from "../../asset/Group.svg";
+import { ReactComponent as Icon } from "../../asset/np_notification_2425223_000000 1.svg";
+import imag from "../../asset/image 4.svg";
+import { ReactComponent as Drop } from "../../asset/np_dropdown.svg";
+import { ReactComponent as Search } from "../../asset/Vector.svg";
 
 export default function NavBar() {
   const [input, setIput] = useState("");
@@ -23,15 +24,17 @@ export default function NavBar() {
   return (
     <div>
       <nav className="navbar">
-        <img src={Logo} className="navbar__logo" />
-        <form onSubmit={onSubmit}>
+        <img src={Logo} width="150px" className="navbar__logo" />
+        <form className="form" onSubmit={onSubmit}>
           <input
             type="text"
             onChange={onChange}
             value={input}
             placeholder="search for anything"
           />
-          <button>search</button>
+          <button>
+            <Search />{" "}
+          </button>
         </form>
 
         <div className="hamburger" onClick={handleClick}>
@@ -46,16 +49,18 @@ export default function NavBar() {
           <i className="fas fa-bars"></i>
         </div> */}
         <div className="navbar__menu">
-          <a href="" className="navbar__menu--links">
+          <a href="" className="navbar__menu--link">
             Docs
           </a>
           <a href="/#">
-            <img src={icon} />
+            {/* <img src={icon} /> */}
+            <Icon />
           </a>
 
-          <img src={imag} />
-          <label>Kazeem</label>
-          <img src={drop} />
+          <img src={imag} alt="avatar" className="avatar-logo" />
+          <p>Kazeem</p>
+          <Drop className="drop" />
+          {/* <img src={drop} /> */}
 
           {/* <a href="" className="navbar__menu--links">
             Product

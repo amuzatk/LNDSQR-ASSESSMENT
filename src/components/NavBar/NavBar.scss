@@ -1,3 +1,5 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 $white: #ffffff;
 $dark: #222121;
 $lime: #00cc66;
@@ -24,14 +26,22 @@ $blue: #2541b2;
   align-items: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .navbar {
+  position: fixed;
+  width: 100%;
+  border: 1px solid black;
   background-color: $white;
-  height: 80px;
+  height: 90px;
   display: flex;
   justify-content: space-between;
   padding: 0.5rem calc((100vw - 1200px) / 2);
   z-index: 10;
-  position: relative;
+  // position: relative;
 
   &__logo {
     // color: $dark;
@@ -51,40 +61,57 @@ $blue: #2541b2;
     @extend %align-center;
   }
 
-  &__bars {
-    opacity: 0;
-
-    @include tablet {
-      color: $dark;
-      opacity: 1;
-      position: absolute;
-      top: 22px;
-      right: 20px;
-      font-size: 2rem;
-    }
+  .form {
+    margin-top: 15px;
+    height: 30px;
+    // font-size: 25px;
+    margin-left: -230px;
+    border: 1px solid black;
+    // width: 30px;
   }
+
+  // &__bars {
+  //   opacity: 0;
+
+  //   @include tablet {
+  //     color: $dark;
+  //     opacity: 1;
+  //     position: absolute;
+  //     top: 22px;
+  //     right: 20px;
+  //     font-size: 2rem;
+  //   }
+  // }
 
   &__menu {
     @extend %align-center;
-    list-style: none;
-    text-align: center;
-    margin-right: 24px;
+    // padding: 5rem;
+
+    // margin-left: 50px;
+
+    // list-style: none;
+    // text-align: center;
+    // margin-right: 24px;
 
     @include tablet {
       display: none;
     }
 
-    &--links {
+    &--link {
       color: $dark;
       @extend %align-center;
       justify-content: center;
-      text-decoration: none;
-      padding: 0 1rem;
+      // text-decoration: none;
+      // padding: 0 1rem;
 
       &:hover {
         color: $lime;
         transition: all 0.3s ease;
       }
+    }
+
+    .avatar-logo {
+      border-radius: 50%;
     }
     #button {
       padding: 12px 24px;
@@ -93,12 +120,17 @@ $blue: #2541b2;
       border-radius: 4px;
       background: $lime;
       margin-left: 16px;
-      color: $light;
+      color: $white;
 
       &:hover {
         background: $orangeRed;
         transition: all 0.3s ease;
       }
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .hamburger {
+      display: none;
     }
   }
 }

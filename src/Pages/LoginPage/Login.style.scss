@@ -1,0 +1,135 @@
+$defaultborder: 1px solid black;
+$darkblue: #213f7d;
+$lightblue: #545f7d;
+$skyblue: #39cdcc;
+$white: #ffffff;
+$font-40: 40px;
+$font-14: 14px;
+$font-12: 12px;
+
+.login-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+
+  .img-section {
+    width: 50%;
+    padding: 50px 60px;
+
+    .illustration {
+      margin-top: 100px;
+    }
+  }
+
+  .login-section {
+    width: 50%;
+    padding: 120px 80px;
+    box-shadow: 0px 15px 90px rgba(0, 0, 0, 0.03);
+
+    .form-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+
+      .input {
+        width: 100%;
+        height: 50px;
+        background: #ffffff;
+        border: 2px solid rgba(84, 95, 125, 0.15);
+        border-radius: 5px;
+        margin-top: 20px;
+        padding: 20px;
+        color: $lightblue;
+      }
+
+      .submit-input {
+        width: 100%;
+        height: 50px;
+        color: #ffffff;
+        font-size: $font-14;
+        background: $skyblue;
+        border-radius: 8px;
+        border: none;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: $font-12;
+        color: $skyblue;
+        margin-top: 20px;
+      }
+
+      .input-password {
+        position: relative;
+
+        .cont {
+          position: absolute;
+          bottom: 13px;
+          right: 30px;
+          font-size: 16px;
+          color: $skyblue;
+          font-weight: 600;
+        }
+      }
+    }
+
+    h1 {
+      font-size: $font-40;
+      color: $darkblue;
+      line-height: 55px;
+    }
+
+    p {
+      font-size: $font-14;
+      color: $lightblue;
+      line-height: 27px;
+    }
+
+    .mobile-logo {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .login-container {
+    display: block;
+    width: 100%;
+    margin: 60px auto;
+
+    .img-section {
+      display: none;
+    }
+
+    .login-section {
+      width: 100%;
+      box-shadow: none;
+
+      .mobile-logo {
+        display: block;
+      }
+    }
+
+    .form-container {
+      width: 100%;
+
+      .input-password {
+        position: relative;
+
+        .cont {
+          position: absolute;
+          bottom: 13px;
+          right: 30px;
+          font-size: 14px;
+          color: $skyblue;
+          font-weight: 600;
+        }
+      }
+    }
+
+    .Login-info {
+      margin-top: 50px;
+    }
+  }
+}

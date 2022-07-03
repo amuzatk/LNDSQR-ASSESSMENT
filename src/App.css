@@ -1,4 +1,38 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Avenir Next LT Pro', sans-serif;
+} */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  --margin-xl: 4rem;
+  --margin-lg: 3rem;
+  --margin-md: 2rem;
+  --margin-sm: 1rem;
+  --margin-xs: 0.8rem;
+  --margin-xxs: 0.5rem;
+
+  --padding-xl: 4rem;
+  --padding-lg: 3rem;
+  --padding-md: 2rem;
+  --padding-sm: 1rem;
+  --padding-xs: 0.8rem;
+  --padding-xxs: 0.5rem;
+
+  font-family: "Poppins", sans-serif;
+  /* overflow: hidden; */
+  background: rgb(237, 240, 242);
+  background: white;
+}
+
 .App {
+  display: flex;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +69,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

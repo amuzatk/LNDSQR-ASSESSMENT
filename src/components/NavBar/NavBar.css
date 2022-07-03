@@ -3,6 +3,12 @@
   align-items: center;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   background-color: #ffffff;
   height: 80px;
@@ -13,11 +19,8 @@
   position: relative;
 }
 .navbar__logo {
-  color: #222121;
   cursor: pointer;
-  text-decoration: none;
-  font-size: 0.5rem;
-  margin-left: 24px;
+  width: 144.8px;
 }
 .navbar__bars {
   opacity: 0;
@@ -59,7 +62,7 @@
   border-radius: 4px;
   background: #00cc66;
   margin-left: 16px;
-  color: #f0f0f0;
+  color: #ffffff;
 }
 .navbar__menu #button:hover {
   background: #fb4b4e;
