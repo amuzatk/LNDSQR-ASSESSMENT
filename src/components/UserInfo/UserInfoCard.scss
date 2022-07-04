@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+.card {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  //   margin: 0 -5px;
+
+  //   background-color: #ffffff;
+
+  //   grid-template-columns: repeat(4, 1fr);
+
+  //   position: absolute;
+  //   width: 240px;
+  //   height: 160px;
+  //   left: 343px;
+  //   top: 228px;
+
+  background: #ffffff;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
