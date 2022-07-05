@@ -39,25 +39,25 @@ import { ReactComponent as Grp8 } from "../../asset/sliders-h 1.svg";
 import { ReactComponent as Grp9 } from "../../asset/badge-1.svg";
 import { ReactComponent as Grp10 } from "../../asset/clipboard-list 1.svg";
 
-const NavUrl = ({ url, icon, description }) => {
-  const { nav, setNav } = useContext(NavContext);
-  const checkWindowSize = () => {
-    if (window.innerWidth < 1024) setNav(!nav);
-  };
+// const NavUrl = ({ url, icon, description }) => {
+//   const { nav, setNav } = useContext(NavContext);
+//   const checkWindowSize = () => {
+//     if (window.innerWidth < 1024) setNav(!nav);
+//   };
 
-  return (
-    <li className={styles.li_navlink}>
-      <NavLink
-        to={`${url}`}
-        className={({ isActive }) => (isActive ? styles.active : undefined)}
-        onClick={() => checkWindowSize()}
-      >
-        {icon}
-        <span className={styles.description}>{description}</span>
-      </NavLink>
-    </li>
-  );
-};
+//   return (
+//     <li className={styles.li_navlink}>
+//       <NavLink
+//         to={`${url}`}
+//         className={({ isActive }) => (isActive ? styles.active : undefined)}
+//         onClick={() => checkWindowSize()}
+//       >
+//         {icon}
+//         <span className={styles.description}>{description}</span>
+//       </NavLink>
+//     </li>
+//   );
+// };
 
 // const Navbar = () => {
 const Sidebar = () => {
