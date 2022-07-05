@@ -34,7 +34,12 @@ export default function NavBar() {
               value={input}
               placeholder="search for anything"
             />
-            <button type="submit" className="button"></button>
+            <button type="submit" className="button">
+              {" "}
+              <i className="ri-search-line"></i>
+              {/* <i className="fa fa-search" aria-hidden="true"></i> */}
+              {/* search{" "} */}
+            </button>
           </form>
         </div>
 
