@@ -27,7 +27,7 @@ const UserInfo = () => {
     });
   };
 
-  const per_page = 10;
+  const per_page = 20;
   const pageCount = Math.ceil(users.length / per_page);
 
   const offset = currentPage * per_page;
@@ -64,13 +64,13 @@ const UserInfo = () => {
           <tr>
             <GrpBars />
           </tr> */}
-            {/* <tr>Organization</tr>
-          <GrpBars />
-          <tr>Username</tr>
-          <tr>Email</tr>
-          <tr>Phone No.</tr>
-          <tr>Date Joined</tr>
-          <tr>Status</tr> */}
+            <tr>Organization</tr>
+            {/* <GrpBars /> */}
+            <tr>Username</tr>
+            <tr>Email</tr>
+            <tr>Phone No.</tr>
+            <tr>Date Joined</tr>
+            <tr>Status</tr>
           </thead>
           <tbody>
             {users.slice(offset, offset + per_page).map((user) => {
@@ -88,7 +88,8 @@ const UserInfo = () => {
               const dateString = `${month} ${day}, ${year} ${time}`;
 
               return (
-                <tr key={id} onClick={() => viewUser(id)}>
+                // <tr key={id} onClick={() => viewUser(id)}>
+                <tr key={id}>
                   <td>{orgName}</td>
                   <td>{phoneNumber}</td>
                   <td>{email}</td>

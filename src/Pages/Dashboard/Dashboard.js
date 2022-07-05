@@ -11,7 +11,7 @@ export default function Users() {
     <div>
       <header>
         {/* <header className="header"> */}
-        <NavBar />
+        {/* <NavBar /> */}
       </header>
       {/* <section> */}
       <section className="main">

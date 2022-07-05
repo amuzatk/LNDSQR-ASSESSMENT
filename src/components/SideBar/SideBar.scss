@@ -1,3 +1,291 @@
+// NEW STYLINGS
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  //   text-decoration: none;
+}
+
+.data {
+  background: rgb(5, 113, 77);
+  //   background: url(Laptop.jpg);
+  height: 100vh;
+  margin-left: 250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container {
+  //   margin-top: 50px;
+  overflow-y: scroll;
+  height: 100vh;
+  width: 15%;
+}
+
+.nav-cont {
+  //   display: none;
+  //   background-color: #102951;
+  background-color: white;
+  //   border: 1px solid green;
+  line-height: 80px;
+  position: fixed;
+  width: 100%;
+  height: 84px;
+
+  .search-content {
+    // border: 1px solid #39cdcc;
+    margin-right: 690px;
+    width: 20%;
+    // height: 35px;
+    // border-radius: 10px;
+    // padding-left: 18px;
+    // font-weight: 400;
+    // font-size: 14px;
+    // line-height: 16px;
+
+    .inputt {
+      border: 1px solid #39cdcc;
+      width: 100%;
+      height: 35px;
+      border-radius: 10px;
+      padding-left: 18px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .buttons {
+      position: absolute;
+      border: 1px solid #39cdcc;
+
+      top: 23px;
+      right: 645px;
+      width: 4%;
+      height: 35px;
+
+      border-right: 10px;
+      border-left: 30px;
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      color: white;
+      background-color: #39cdcc;
+    }
+  }
+
+  .navb-log {
+    color: white;
+    cursor: pointer;
+    margin-left: 80px;
+    margin-top: 30px;
+  }
+  label {
+    display: none;
+    line-height: 80px;
+    font-size: 30px;
+    color: white;
+    font-weight: 600px;
+    margin-left: 50px;
+    cursor: pointer;
+  }
+}
+
+.search-content {
+  float: right;
+  //   border: 1px solid red;
+  margin-right: 700px;
+}
+
+ul {
+  //   border: 1px solid yellow;
+}
+
+.nav-ul {
+  //   border: 1px solid black;
+  //   float: right;
+  margin-left: 970px;
+  margin-top: -85px;
+  display: flex;
+  //   padding: 5rem;
+  //   justify-content: right;
+
+  .avat-logos {
+    // padding-right: 20px;
+  }
+
+  .avat-logos {
+    // border: 1px solid blue;
+    margin-left: 50px;
+    border-radius: 100px;
+    // width: 100px;
+  }
+
+  .ref-icon {
+    margin-left: 50px;
+  }
+
+  p {
+    margin-left: 5px;
+  }
+
+  .drops {
+    // border: 1px solid red;
+    margin-left: 1px;
+  }
+}
+
+.nav-ul-li {
+  display: none;
+  margin: 0 10px;
+  line-height: 80px;
+}
+
+nav ul li a {
+  display: none;
+  color: white;
+  font-size: 20px;
+  padding: 21px;
+  font-weight: 600;
+  background-color: rgb(55, 34, 246);
+  border-radius: 7px;
+}
+
+nav ul li a:hover {
+  background-color: rgb(161, 153, 228);
+  color: white;
+  transition: 0.3s;
+}
+
+.side-men {
+  position: fixed;
+  //   position: absolute;
+  //   background-color: rgb(6, 3, 30);
+  width: 250px;
+  height: 100%;
+  margin-top: 85px;
+}
+.imga {
+  display: none;
+  width: 125px;
+  height: 120px;
+  border-radius: 50%;
+  margin-top: 30px;
+  border: 3px solid white;
+}
+
+.side-men center h2 {
+  display: none;
+  color: white;
+}
+
+.side-men a {
+  display: block;
+  line-height: 60px;
+  transition: 0.5s;
+  //   color: white;
+}
+
+.side-men a:hover {
+  background: rgb(20, 59, 165);
+  padding-left: 20px;
+}
+
+.side-men span {
+  font-size: 20px;
+  margin-left: 10px;
+  color: white;
+}
+
+.side-men .imag {
+  margin-left: 20px;
+  font-size: 20px;
+  color: white;
+}
+
+.men-bar {
+  float: right;
+  margin-top: 20px;
+  display: none;
+  margin-right: 20px;
+}
+
+#men {
+  display: none;
+}
+
+.side-men .logout {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .side-men a span {
+    display: none;
+  }
+
+  .side-men center {
+    display: none;
+  }
+
+  .side-men {
+    width: 100px;
+  }
+
+  .side-men a .imag {
+    // display: none;
+    line-height: 80px;
+    text-align: center;
+    margin-left: 0;
+    font-size: 35px;
+    display: block;
+  }
+
+  .data {
+    // background: rgb(5, 113, 77);
+    //   background: url(Laptop.jpg);
+    // height: 100vh;
+    margin-left: 100px;
+    // background-size: cover;
+    // background-repeat: no-repeat;
+  }
+}
+
+@media (max-width: 650px) {
+  .data {
+    display: none;
+  }
+
+  .nav-ul {
+    display: none;
+  }
+
+  .side-men {
+    width: 100%;
+    text-align: center;
+    left: 100%;
+    background-color: aquamarine;
+    transition: all 0.5s;
+  }
+
+  .side-men a .imag {
+    display: none;
+  }
+
+  .side-men a span {
+    display: block;
+  }
+
+  .side-men .logout {
+    display: block;
+  }
+  nav .men-bar {
+    display: block;
+  }
+
+  #men:checked ~ .side-men {
+    left: 0;
+  }
+}
+
 // .navbar_container {
 //   --color_nav_bg: rgb(181, 47, 47);
 //   --color_nav_bg: rgb(30, 41, 59);
@@ -33,12 +321,6 @@
 //   }
 // }
 
-.switch,
-.brief {
-  //   color: #213f7d;
-  //   margin-left: 40px;
-}
-
 // .nav {
 //   position: relative;
 //     width: var(--nav_width);
@@ -56,15 +338,11 @@
 //   }
 // }
 
-.nav-contain {
-  //   margin-top: 50px;
-}
-
 .contain {
   //   margin-top: 50px;
-  overflow-y: scroll;
+  //   overflow-y: scroll;
   height: 100vh;
-  width: 15%;
+  //   width: 15%;
 }
 
 .logo {
