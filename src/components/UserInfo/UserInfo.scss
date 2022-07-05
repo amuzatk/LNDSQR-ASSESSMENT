@@ -30,3 +30,9 @@
 .table-h {
   display: contents;
 }
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

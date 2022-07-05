@@ -9,7 +9,11 @@ import "./Dashboard.scss";
 export default function Users() {
   return (
     <div>
-      <header className="header">{/* <NavBar /> */}</header>
+      <header>
+        {/* <header className="header"> */}
+        <NavBar />
+      </header>
+      {/* <section> */}
       <section className="main">
         <Sidebar />
         <UserInfo />

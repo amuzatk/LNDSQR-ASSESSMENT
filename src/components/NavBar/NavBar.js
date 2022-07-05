@@ -25,17 +25,18 @@ export default function NavBar() {
     <div>
       <nav className="navbar">
         <img src={Logo} width="150px" className="navbar__logo" />
-        <form className="form" onSubmit={onSubmit}>
-          <input
-            type="text"
-            onChange={onChange}
-            value={input}
-            placeholder="search for anything"
-          />
-          <button>
-            <Search />{" "}
-          </button>
-        </form>
+        <div className="search-container">
+          <form className="form" onSubmit={onSubmit}>
+            <input
+              className="input"
+              type="text"
+              onChange={onChange}
+              value={input}
+              placeholder="search for anything"
+            />
+            <button type="submit" className="button"></button>
+          </form>
+        </div>
 
         <div className="hamburger" onClick={handleClick}>
           {click ? (
@@ -53,8 +54,7 @@ export default function NavBar() {
             Docs
           </a>
           <a href="/#">
-            {/* <img src={icon} /> */}
-            <Icon />
+            <Icon className="ref-icon" />
           </a>
 
           <img src={imag} alt="avatar" className="avatar-logo" />

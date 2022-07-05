@@ -14,7 +14,7 @@ function App() {
 
         <Route exact path="/dashboard" element={<Users />} />
 
-        {/* <Route exact path="/user-detail" element={<UserDetail />} /> */}
+        <Route exact path="/user-detail" element={<UserDetail />} />
       </Routes>
     </Router>
   );

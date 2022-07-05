@@ -15,10 +15,6 @@ const UserInfo = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-  //   const [pageCount, setPageCount] = useState(0);
-
-  // const limit = 10;
-  //   const totalCount = 100;
 
   const baseUrl = `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/`;
 
@@ -46,25 +42,7 @@ const UserInfo = () => {
 
   useEffect(() => {
     getUser();
-    // setPageCount(Math.ceil(totalCount / limit));
   }, []);
-
-  //   const getPaginatedUsers = async (currentPage) => {
-  //     const res = await axios.get(
-  //       `${baseUrl}users?page=${currentPage}&limit=${limit}`
-  //     );
-
-  //     const data = await res.data;
-  //     return data;
-  //   };
-
-  //   const handlePageClick = async (data) => {
-  //     console.log(data.selected);
-
-  //     let currentPage = data.selected + 1;
-
-  //     const newsFormServer = await getPaginatedUsers(currentPage);
-  //   };
 
   return (
     <main className="user-section">
@@ -123,30 +101,10 @@ const UserInfo = () => {
           </tbody>
         </table>
 
-        {/* <ReactPaginate
-          previousLabel={"<<"}
-          nextLabel={">>"}
-          breakLabel={"..."}
-          pageCount={pageCount}
-          marginPagesDisplayed={3}
-          pageRangeDisplayed={6}
-          onPageChange={handlePageClick}
-          containerClassName={"pagination justify-content-center"}
-          pageClassName={"page-item"}
-          pageLinkClassName={"page-link"}
-          previousClassName={"page-item"}
-          previousLinkClassName={"page-link"}
-          nextClassName={"page-item"}
-          nextLinkClassName={"page-link"}
-          breakClassName={"page-item"}
-          breakLinkClassName={"page-link"}
-          activeClassName={"active"}
-        /> */}
-
         <ReactPaginate
           className="footer"
-          previousLabel="Previous"
-          nextLabel="Load More"
+          previousLabel="<"
+          nextLabel=">"
           pageCount={pageCount}
           renderOnZeroPageCount={null}
           pageRangeDisplayed={5}
