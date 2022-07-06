@@ -18,7 +18,7 @@
 
 .container {
   //   margin-top: 50px;
-  overflow-y: scroll;
+  //   overflow-y: visible;
   height: 100vh;
   width: 15%;
 }
@@ -96,10 +96,6 @@
   margin-right: 700px;
 }
 
-ul {
-  //   border: 1px solid yellow;
-}
-
 .nav-ul {
   //   border: 1px solid black;
   //   float: right;
@@ -160,9 +156,15 @@ nav ul li a:hover {
   position: fixed;
   //   position: absolute;
   //   background-color: rgb(6, 3, 30);
-  width: 250px;
+  width: 200px;
   height: 100%;
-  margin-top: 85px;
+  margin-top: 83px;
+  //   overflow-y: scroll;
+  //   border: 1px solid red;
+}
+
+.dashboard {
+  margin-top: -15px;
 }
 .imga {
   display: none;
@@ -180,8 +182,9 @@ nav ul li a:hover {
 
 .side-men a {
   display: block;
-  line-height: 60px;
+  line-height: 18px;
   transition: 0.5s;
+  //   margin-top: 33px;
   //   color: white;
 }
 
