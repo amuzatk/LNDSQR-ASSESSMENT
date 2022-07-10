@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import ReactPaginate from "react-paginate";
 
 import User1 from "../../asset/user1.svg";
 import User2 from "../../asset/user2.svg";
@@ -14,6 +15,7 @@ import "./UserDetail.scss";
 const UserDetail = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
 
   const getUser = () => {
     axios
@@ -21,6 +23,14 @@ const UserDetail = () => {
       .then((res) => {
         setUsers(res.data);
       });
+  };
+
+  const per_page = 20;
+  const pageCount = Math.ceil(users.length / per_page);
+
+  const offset = currentPage * per_page;
+  const handlePageClick = ({ selected: selectedPage }) => {
+    setCurrentPage(selectedPage);
   };
 
   // const viewUser = (id) => {
@@ -125,37 +135,45 @@ const UserDetail = () => {
           <tr>Status</tr>
         </thead>
         <tbody>
-          {users
-            // .filter(filterData)
-            // labore-dolor-et
-            .map((user) => {
-              const { orgName, phoneNumber, email, userName, createdAt, id } =
-                user;
+          {users.slice(offset, offset + per_page).map((user) => {
+            const { orgName, phoneNumber, email, userName, createdAt, id } =
+              user;
 
-              const date = new Date(createdAt);
-              const day = date.getDate();
-              const month = date.toLocaleString("default", { month: "long" });
-              const year = date.getFullYear();
-              const hours = date.getHours();
-              const minutes = date.getMinutes();
-              const ampm = hours >= 12 ? "pm" : "am";
-              const time = (hours % 12) + ":" + minutes + " " + ampm;
-              const daUserDetailring = `${month} ${day}, ${year} ${time}`;
+            const date = new Date(createdAt);
+            const day = date.getDate();
+            const month = date.toLocaleString("default", { month: "long" });
+            const year = date.getFullYear();
+            const hours = date.getHours();
+            const minutes = date.getMinutes();
+            const ampm = hours >= 12 ? "pm" : "am";
+            const time = (hours % 12) + ":" + minutes + " " + ampm;
+            const daUserDetailring = `${month} ${day}, ${year} ${time}`;
 
-              return (
-                <tr key={id}>
-                  {/* <tr key={id} onClick={() => viewUser(id)}> */}
-                  <td>{orgName}</td>
-                  <td>{userName}</td>
-                  <td>{email}</td>
-                  <td>{phoneNumber}</td>
-                  <td>{daUserDetailring}</td>
-                  <td>Status</td>
-                </tr>
-              );
-            })}
+            return (
+              <tr key={id}>
+                {/* <tr key={id} onClick={() => viewUser(id)}> */}
+                <td>{orgName}</td>
+                <td>{userName}</td>
+                <td>{email}</td>
+                <td>{phoneNumber}</td>
+                <td>{daUserDetailring}</td>
+                <td>Status</td>
+              </tr>
+            );
+          })}
         </tbody>
       </table>
+
+      <ReactPaginate
+        className="footer"
+        previousLabel="<"
+        nextLabel=">"
+        pageCount={pageCount}
+        renderOnZeroPageCount={null}
+        pageRangeDisplayed={5}
+        breakLabel="..."
+        onPageChange={handlePageClick}
+      />
     </main>
   );
 };
