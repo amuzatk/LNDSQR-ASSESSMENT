@@ -50,7 +50,7 @@ import { ReactComponent as Ima } from "../../asset/np_notification_2425223_00000
 
 import { ReactComponent as Icon } from "../../asset/np_notification_2425223_000000 1.svg";
 
-const Sidebar = () => {
+const Sidebar2 = () => {
   const [input, setIput] = useState("");
 
   const onSubmit = () => {};
@@ -258,4 +258,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Sidebar2;

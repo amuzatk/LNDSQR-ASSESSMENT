@@ -14,6 +14,7 @@ import "./UserFilter.scss";
 
 const UserFilter = () => {
   const navigate = useNavigate();
+
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
 
@@ -33,10 +34,10 @@ const UserFilter = () => {
     setCurrentPage(selectedPage);
   };
 
-  // const viewUser = (id) => {
-  //   localStorage.setItem("userId", id);
-  //   navigate("/dashboard");
-  // };
+  const viewUser = (id) => {
+    localStorage.setItem("userId", id);
+    navigate("/user-detail");
+  };
 
   useEffect(() => {
     getUser();
@@ -122,7 +123,7 @@ const UserFilter = () => {
           onChange={handleChange}
         />
 
-        <button>Filters</button>
+        <button onClick={() => viewUser()}>Filters</button>
       </form>
 
       <table>

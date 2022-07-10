@@ -108,7 +108,7 @@ const UserInfo = () => {
           nextLabel=">"
           pageCount={pageCount}
           renderOnZeroPageCount={null}
-          pageRangeDisplayed={5}
+          // pageRangeDisplayed={5}
           breakLabel="..."
           onPageChange={handlePageClick}
         />
