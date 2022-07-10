@@ -34,15 +34,16 @@
   height: 84px;
 
   .search-content {
-    // border: 1px solid #39cdcc;
     margin-right: 690px;
-    width: 20%;
-    // height: 35px;
-    // border-radius: 10px;
-    // padding-left: 18px;
-    // font-weight: 400;
-    // font-size: 14px;
-    // line-height: 16px;
+    width: 22%;
+    height: 35px;
+    border-radius: 10px;
+    padding-left: 18px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    float: right;
+    margin-top: 23px;
 
     .inputt {
       border: 1px solid #39cdcc;
@@ -90,11 +91,11 @@
   }
 }
 
-.search-content {
-  float: right;
-  //   border: 1px solid red;
-  margin-right: 700px;
-}
+// .search-content {
+//   float: right;
+//   border: 1px solid red;
+//   margin-right: 700px;
+// }
 
 .nav-ul {
   //   border: 1px solid black;

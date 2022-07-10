@@ -128,7 +128,7 @@ const Sidebar = () => {
         <h6>CUSTOMER</h6>
 
         <div>
-          <Link style={{ textDecoration: "none" }} to="/user-detail">
+          <Link style={{ textDecoration: "none" }} to="/filter">
             <Use /> Users
           </Link>
         </div>

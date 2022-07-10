@@ -2,6 +2,15 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+import User1 from "../../asset/user1.svg";
+import User2 from "../../asset/user2.svg";
+import User3 from "../../asset/user3.svg";
+import User4 from "../../asset/user4.svg";
+
+// import Card from "./UserInfoCard";
+import Card from "../UserInfo/UserInfoCard";
+import "./UserDetail.scss";
+
 const UserDetail = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
@@ -50,10 +59,6 @@ const UserDetail = () => {
     setUsers(filtered);
   };
 
-  // const [select, setSelect] = useState({
-  //   value: "select",
-  // });
-
   const [input, setInput] = useState({
     userName: "",
     email: "",
@@ -68,29 +73,16 @@ const UserDetail = () => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
 
-  // const filterData = (data) => {
-  //   const { value } = select;
-  //   const { userName, email, phoneNo } = input;
-
-  //   if (value && data.orgName !== value) return false;
-  //   if (userName && data.userName !== userName) return false;
-  //   if (email && data.email !== email) return false;
-  //   if (phoneNo && data.phoneNumber !== phoneNo) return false;
-
-  //   return true;
-  // };
-
-  // const handleFilter = (e) => {
-  //   e.preventDefault();
-  //   const filtered = users.filter(filterData);
-  //   console.log(filtered);
-  //   setSelect({ value: "select" });
-  //   setInput({ userName: "", email: "", phoneNo: "" });
-  //   setUsers(filtered);
-  // };
-
   return (
-    <div className="project2">
+    <main className="filter-section">
+      <section className="card-section">
+        <h1>Users</h1>
+        <Card imgsrc={User1} title="USERS" text="2,453" />
+        <Card imgsrc={User2} title="ACTIVE USERS" text="2,453" />
+        <Card imgsrc={User3} title="USERS WITH LOANS" text="12,453" />
+        <Card imgsrc={User4} title="USERS WITH SAVINGS" text="102,453" />
+      </section>
+
       <form onSubmit={handleFilter}>
         <select value={select.value} onChange={handleSelect}>
           <option value="">Select Organization</option>
@@ -164,7 +156,7 @@ const UserDetail = () => {
             })}
         </tbody>
       </table>
-    </div>
+    </main>
   );
 };
 

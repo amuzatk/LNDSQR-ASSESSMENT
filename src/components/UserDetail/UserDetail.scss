@@ -1,15 +1,22 @@
-.detail-header {
-  display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-between;
+// .detail-header {
+//   display: flex;
 
-  .blacklist {
-    margin-left: 400px;
-    color: red;
-    border: 1px solid black;
-  }
+//   .blacklist {
+//     margin-left: 400px;
+//     color: red;
+//     border: 1px solid black;
+//   }
 
-  .activate {
-    margin-left: 10px;
-  }
+//   .activate {
+//     margin-left: 10px;
+//   }
+// }
+
+.filter-section {
+  // border: 1px solid red;
+  background-color: #e5e5e5;
+  margin-top: -400px;
+  z-index: 10px;
+  width: 85%;
+  margin-left: 15%;
 }
