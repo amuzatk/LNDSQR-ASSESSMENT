@@ -10,9 +10,9 @@ import User4 from "../../asset/user4.svg";
 
 // import Card from "./UserInfoCard";
 import Card from "../UserInfo/UserInfoCard";
-import "./UserDetail.scss";
+import "./UserFilter.scss";
 
-const UserDetail = () => {
+const UserFilter = () => {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -178,7 +178,7 @@ const UserDetail = () => {
   );
 };
 
-export default UserDetail;
+export default UserFilter;
 
 /* eslint-disable react-hooks/exhaustive-deps */
 // import React, { useState, useEffect } from "react";

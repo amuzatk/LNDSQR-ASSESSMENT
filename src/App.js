@@ -3,7 +3,7 @@ import Login from "./Pages/LoginPage/Login";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Users from "./Pages/Dashboard/Dashboard";
-import UserDetail from "./components/UserDetail/UserDetail";
+// import UserDetail from "./components/UserDetail/UserDetail";
 import FilterPage from "./components/FilterPage/FilterPage";
 
 function App() {

@@ -1,5 +1,5 @@
 import React from "react";
-import UserDetail from "../../components/UserDetail/UserDetail";
+import UserDetail from "../../components/UserFilter/UserFilter";
 import Sidebar from "../../components/SideBar/SideBar";
 import NavBar from "../../components/NavBar/NavBar";
 import UserInfo from "../../components/UserInfo/UserInfo";

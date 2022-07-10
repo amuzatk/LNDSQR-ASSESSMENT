@@ -1,7 +1,7 @@
 import React from "react";
 
 import "./FilterPage.scss";
-import UserDetail from "../UserDetail/UserDetail";
+import UserFilter from "../UserFilter/UserFilter";
 import Sidebar from "../SideBar/SideBar";
 
 export default function FilterPage() {
@@ -9,7 +9,7 @@ export default function FilterPage() {
     <main>
       <section>
         <Sidebar />
-        <UserDetail />
+        <UserFilter />
       </section>
     </main>
   );
