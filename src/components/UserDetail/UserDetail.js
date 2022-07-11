@@ -7,13 +7,17 @@ import Sidebar2 from "../SideBar/SideBar2";
 export default function UserDetail() {
   return (
     <div>
-      <Sidebar2 />
-      <h1> UserDetail Page</h1>
-      <h1> UserDetail Page</h1>
+      <header>
+        <Sidebar2 />
+      </header>
+      <section className="detail-section">
+        <h1> UserDetail Page</h1>
+        <h1> UserDetail Page</h1>
 
-      <h1> UserDetail Page</h1>
+        <h1> UserDetail Page</h1>
 
-      <h1> UserDetail Page</h1>
+        <h1> UserDetail Page</h1>
+      </section>
     </div>
   );
 }

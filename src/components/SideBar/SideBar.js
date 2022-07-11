@@ -46,7 +46,7 @@ import { ReactComponent as SignOut } from "../../asset/sign-out.svg";
 import Logo from "../../asset/Group.svg";
 import Drop from "../../asset/np_dropdown.svg";
 import imag from "../../asset/image 4.svg";
-import { ReactComponent as Ima } from "../../asset/np_notification_2425223_000000 1.svg";
+import { ReactComponent as Ima } from "../../asset/Vector (1).svg";
 
 import { ReactComponent as Icon } from "../../asset/np_notification_2425223_000000 1.svg";
 
@@ -61,7 +61,7 @@ const Sidebar = () => {
 
   return (
     <div className="container">
-      {/* <input type="checkbox" id="men" /> */}
+      <input type="checkbox" id="men" />
 
       <nav className="nav-cont">
         <label>New Styling</label>
@@ -107,17 +107,17 @@ const Sidebar = () => {
           </li>
         </ul>
         <label htmlFor="men" className="men-bar">
-          <FaBars size={30} style={{ color: "red" }} />
+          <FaBars size={30} style={{ color: "blue" }} />
         </label>
       </nav>
 
       <div className="side-men">
-        <center>
+        {/* <center>
           <Grp10 className="imga" />
           <br />
 
           <h2>Kazeem</h2>
-        </center>
+        </center> */}
 
         <br />
 
@@ -274,11 +274,14 @@ const Sidebar = () => {
           <Grp10 className="imag" />
           <span>CUSTOMER</span>
         </a>
+        */}
 
         <a href="#">
           <span className="logout">Logout</span>
-        </a> */}
+        </a>
       </div>
+
+      <div className="data"></div>
     </div>
   );
 };
